@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="bootstrap-5.2.2-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <link rel="shortcut icon" href="img/signos.ico" />
+        <link rel="stylesheet" href="css/style.css">
+        <title>Qual é o seu signo?</title>
+    </head>
+    <body>
+        <div class="content">
+            <div class="title">
+                <img src="img/signos.png">
+                <h1>Descubra as Características do seu Signo!</h1>
+            </div>
+        </div>  
+        <div class="content-form" style="width: 100%;">
+            <div class="form mx-auto col-5">
+                <div class="text-center mb-3 text-secondary">
+                    <form action="signos.php" method="GET">
+                        <input id="nome" required="required" placeholder="Nome Completo:" type="text" class="form-control" name="nome">
+                        <input id="nascimento" placeholder="Nascimento:" type="datetime-local" class="form-control" name="data" required>                   
+                        <div class="consultar">
+                            <input class="btn btn-success" type="submit" name="Consultar" value="Consultar" >
+                        </div>
+                    </form>                    
+                </div>
+                <div class="container-list">
+                    <h6 style="text-decoration: none;">Já sabe qual é o seu signo? Escolha-o abaixo:</h6>
+                    <form action="signos.php" method="GET">
+                        <ul class="lista-signos row">
+                            <li>
+                                <a href="signos.php?signo=1" method="GET"><img src="img/aries.png"></a>
+                                <a href="signos.php?signo=2"><img src="img/touro.png"></a>
+                                <a href="signos.php?signo=3"><img src="img/gemeos.png"></a>
+                                <a href="signos.php?signo=4"><img src="img/cancer.png"></a>
+                                <a href="signos.php?signo=5"><img src="img/leao.png"></a>
+                                <a href="signos.php?signo=6"><img src="img/virgem.png"></a>
+                                <a href="signos.php?signo=7"><img src="img/libra.png"></a>
+                                <a href="signos.php?signo=8"><img src="img/escorpiao.png"></a>
+                                <a href="signos.php?signo=9"><img src="img/sargitario.png"></a>
+                                <a href="signos.php?signo=10"><img src="img/capricornio.png"></a>
+                                <a href="signos.php?signo=11"><img src="img/aquario.png"></a>
+                                <a href="signos.php?signo=12"><img src="img/peixes.png"></a>
+                            </li>
+                        </ul>  
+                    </form>                                      
+                </div>
+            <h6 style="color:black; padding: 10px;">Author: Julio Tavares<br>Out/2022</h6>               
+            </div>            
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script>
+            config = {
+                enableTime: true,
+                dateFormat: "d-m-Y H:i",
+            }
+            flatpickr("input[type=datetime-local]", config);
+        </script>     
+    </body>
+</html>
